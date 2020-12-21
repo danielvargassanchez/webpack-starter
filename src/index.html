@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>webpack starterkit</title>
 </head>
+
 <body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
+  <main class="container">
+    <table id="main-table">
+      <tr class="table-header">
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>Bio</th>
+        <th>Farwell</th>
+      </tr>
+    </table>
+
+
+    <div class="form-group">
+      <input type="text" name="name" id="name" class="form-control">
+      <input type="text" name="lastname" id="lastname" class="form-control">
+      <input type="number" name="age" id="age" class="form-control" min="0" max="110">
+    </div>
+
+    <div class="d-flex">
+      <button class="btn btn-info" onClick="app.refresh()"> Actualizar </button>
+      <button class="btn btn-blue" onClick="app.add(0)"> Agregar Inicio </button>
+      <button class="btn btn-blue" onClick="app.add(1)"> Agregar Fin </button>
+      <button class="btn btn-red" onClick="app.deleteElement(0)"> Borrar Inicio </button>
+      <button class="btn btn-red" onClick="app.deleteElement(1)"> Borrar Fin</button>
+    </div>
+
+    <div class="form-group">
+      <h1>Filter by name: </h1>
+      <input type="text" name="filter" id="filterByName" class="form-control">
+      <button class="btn btn-info btn-filter" onclick="app.filterByName()">Filter</button>
+    </div>
+
+
+    <table id="filter-table">
+      <tr class="table-header">
+        <th>Name</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+
+      <tr>
+        <td>Ejemplo</td>
+        <td>Ejemplo</td>
+        <td>Ejemplo</td>
+      </tr>
+    </table>
+  </main>
+
+
 </body>
+
 </html>
